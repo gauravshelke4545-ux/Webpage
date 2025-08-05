@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanjivani University | A Modern College Website</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+    }
+    main section {
+      display: none;
+    }
+    main section.active {
+      display: block;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    nav a.active {
+      color: #4f46e5;
+      font-weight: 600;
+      border-bottom: 2px solid #4f46e5;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#home" class="nav-link text-2xl font-bold text-indigo-600">
+        <i class="fas fa-graduation-cap mr-2"></i>Sanjivani University
+      </a>
+      <nav class="hidden md:flex space-x-8 items-center">
+        <a href="#home" class="nav-link text-gray-600 hover:text-indigo-600 transition duration-300 pb-1">Home</a>
+        <a href="#about" class="nav-link text-gray-600 hover:text-indigo-600 transition duration-300 pb-1">About</a>
+        <a href="#faculty" class="nav-link text-gray-600 hover:text-indigo-600 transition duration-300 pb-1">Faculty</a>
+        <a href="#students" class="nav-link text-gray-600 hover:text-indigo-600 transition duration-300 pb-1">Students</a>
+        <a href="#contact" class="nav-link text-gray-600 hover:text-indigo-600 transition duration-300 pb-1">Contact</a>
+      </nav>
+      <button id="mobile-menu-button" class="md:hidden">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4">
+      <a href="#home" class="nav-link block py-2 text-gray-600 hover:text-indigo-600">Home</a>
+      <a href="#about" class="nav-link block py-2 text-gray-600 hover:text-indigo-600">About</a>
+      <a href="#faculty" class="nav-link block py-2 text-gray-600 hover:text-indigo-600">Faculty</a>
+      <a href="#students" class="nav-link block py-2 text-gray-600 hover:text-indigo-600">Students</a>
+      <a href="#contact" class="nav-link block py-2 text-gray-600 hover:text-indigo-600">Contact</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-6 py-12">
+
+    <!-- Home -->
+    <section id="home">
+      <div class="relative rounded-lg overflow-hidden h-[60vh] flex items-center justify-center text-white text-center bg-gray-800">
+        <img src="sanjivani.webp"
+             onerror="this.onerror=null;this.src='https://placehold.co/1200x600/334155/e2e8f0?text=Image+Not+Found';"
+             alt="A modern university building" class="absolute inset-0 w-full h-full object-cover opacity-40">
+        <div class="relative z-10 p-8">
+          <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Innovate. Educate. Inspire.</h1>
+          <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Join a community of thinkers, creators, and leaders at Sanjivani University. Discover your potential and shape the future.</p>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2 class="text-3xl font-bold text-center mb-8">About Sanjivani University</h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <img src="sanjivani.webp" 
+               alt="College History" class="rounded-lg shadow-lg">
+        </div>
+        <div class="space-y-4">
+          
+          <p class="text-gray-600 leading-relaxed">Sanjivani University is a premier educational institution committed to nurturing innovation, academic excellence, and global leadership. Established with the vision to empower the next generation of thinkers and creators, Sanjivani University blends tradition with modernity to shape the future of higher education in India and beyond.</p>
+         
+        </div>
+      </div>
+    </section>
+
+    <!-- Faculty -->
+     <section id="faculty">
+  <h2 class="text-3xl font-bold text-center mb-12 text-indigo-700">Master Of Computer Application</h2>
+  <p class="text-center text-gray-600 max-w-2xl mx-auto mb-16">
+    At Sanjivani University, our faculty members are leaders in their fields. 
+  </p>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+     <!-- Faculty Member 1 -->
+    <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition duration-300">
+      <img src="https://picsum.photos/seed/ava/200/200" 
+           onerror="this.onerror=null;this.src='https://placehold.co/200x200?text=Dr.+Ava';"
+           alt="Prof.Yogesh Modhe " class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-indigo-200 object-cover">
+      <h3 class="text-xl font-semibold text-indigo-700">Prof.Yogesh Modhe</h3>
+      <p class="text-indigo-500">Software Engineering & Agile Methodologies.</p>
+    </div>
+
+    <!-- Faculty Member 2 -->
+    <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition duration-300">
+      <img src="https://picsum.photos/seed/ben/200/200" 
+           onerror="this.onerror=null;this.src='https://placehold.co/200x200?text=Prof.+Ben';"
+           alt="Prof. Sasank Nath" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-indigo-200 object-cover">
+      <h3 class="text-xl font-semibold text-indigo-700">Prof. Sasank Nath</h3>
+      <p class="text-indigo-500"> Web Technologies</p>
+      </div>
+
+     <!-- Faculty Member 3-->
+    <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition duration-300">
+      <img src="https://picsum.photos/seed/dan/200/200" 
+           onerror="this.onerror=null;this.src='https://placehold.co/200x200?text=Prof.+Dan';"
+           alt="Prof. Vikas Kumar" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-indigo-200 object-cover">
+      <h3 class="text-xl font-semibold text-indigo-700">Prof. Vikas Kumar</h3>
+      <p class="text-indigo-500">Machine Learning</p>
+      
+    </div>
+  </div>
+</section>     
+    </div>
+    <!-- Students -->
+<section id="students">
+  <h2 class="text-3xl font-bold text-center mb-12 text-indigo-700">Master Of Computer Application Student</h2>
+  <p class="text-center text-gray-600 max-w-2xl mx-auto mb-16">
+    
+  </p>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+    <!-- Student 1 -->
+    <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition duration-300">
+      <img src="https://picsum.photos/seed/student1/200/200" 
+           onerror="this.onerror=null;this.src='https://placehold.co/200x200?text=Student+1';"
+           alt="Student 1" class="w-28 h-28 rounded-full mx-auto mb-4 border-4 border-indigo-100 object-cover">
+      <h3 class="text-lg font-semibold text-indigo-700">Gaurav Shelke</h3>
+      <p class="text-indigo-500 text-sm">MCA | Computer Science</p>
+      
+    </div>
+</p>
+ </div>
+      </div>
+    </section>
+
+ <!-- Contact -->
+         <section id="contact">
+  <h1 class="text-3xl font-bold text-center mb-8 text-indigo-700">Contact Us</h1>
+  <p class="text-center text-gray-600 mb-10 max-w-xl mx-auto">
+    
+  </p>
+
+  <div class="grid md:grid-cols-2 gap-10 items-start">
+    <!-- Contact Form -->
+    <form class="bg-white p-8 rounded-lg shadow-md space-y-6">
+      <div>
+        <label class="block text-gray-700 font-medium mb-1" for="name">Full Name</label>
+        <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      </div>
+      <div>
+        <label class="block text-gray-700 font-medium mb-1" for="email">Email Address</label>
+        <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      </div>
+      <div>
+        <label class="block text-gray-700 font-medium mb-1" for="message">Your Message</label>
+        <textarea id="message" name="message" rows="4" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+      </div>
+      <button type="submit" class="bg-indigo-600 text-white font-semibold px-6 py-2 rounded hover:bg-indigo-700 transition duration-300">
+        Send Message
+      </button>
+    </form>
+
+    <!-- Contact Info -->
+    <div class="space-y-6">
+      <div class="flex items-start gap-4">
+        <i class="fas fa-map-marker-alt text-indigo-600 text-2xl"></i>
+        <div>
+          <h4 class="font-semibold text-gray-800">Campus Address</h4>
+          <p class="text-gray-600">Sanjivani University, Post Box 123, Ahmednagar, Maharashtra 423603</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4">
+        <i class="fas fa-envelope text-indigo-600 text-2xl"></i>
+        <div>
+          <h4 class="font-semibold text-gray-800">Email</h4>
+          <p class="text-gray-600">info@sanjivaniuniversity.edu.in</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4">
+        <i class="fas fa-phone-alt text-indigo-600 text-2xl"></i>
+        <div>
+          <h4 class="font-semibold text-gray-800">Phone</h4>
+          <p class="text-gray-600">+91 98765 43210</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ </main>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const navLinks = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll('main section');
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      function showSection(hash) {
+        const targetId = (hash && hash !== '#') ? hash.substring(1) : 'home';
+        const targetSection = document.getElementById(targetId);
+
+        sections.forEach(section => {
+          section.classList.remove('active');
+        });
+
+        if (targetSection) {
+          targetSection.classList.add('active');
+        } else {
+          document.getElementById('home').classList.add('active');
+        }
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${targetId}`) {
+            link.classList.add('active');
+          }
+        });
+
+        mobileMenu.classList.add('hidden');
+      }
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const hash = this.getAttribute('href');
+          if (history.pushState) {
+            history.pushState(null, null, hash);
+          } else {
+            location.hash = hash;
+          }
+          showSection(hash);
+        });
+      });
+
+      window.addEventListener('load', function () {
+        showSection(location.hash);
+      });
+
+      window.addEventListener('popstate', function () {
+        showSection(location.hash);
+      });
+
+      mobileMenuButton.addEventListener('click', function () {
+        mobileMenu.classList.toggle('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
